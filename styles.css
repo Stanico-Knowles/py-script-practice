@@ -29,7 +29,7 @@ html {
     font-weight: bold;
 }
 
-.hero h1 {
+.hero h1, h4 {
     color: #ffffff;
 }
 
