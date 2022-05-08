@@ -9,10 +9,6 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.hero {
-    background: #36b6ff;
-}
-
 .container {
     display: flex;
     align-items: center;
@@ -25,9 +21,10 @@ html {
 }
 
 .hero {
+    background: #36b6ff;
     width: 100%;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -84,7 +81,7 @@ html {
 @media only screen and (max-width: 600px) {
     .heading {
         margin-top: 1rem;
-        padding: 0;
+        padding: 0.5rem;
     }
 
     .form-input, .btn {
