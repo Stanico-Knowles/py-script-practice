@@ -9,15 +9,6 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-button:focus {
-    box-shadow: none;
-    text-decoration: none;
-}
-
-.navbar {
-    background: #444444 !important;
-}
-
 .hero {
     background: #36b6ff;
 }
