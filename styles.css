@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.navbar {
+    background: #444444 !important;
+}
+
+.hero {
+    background: #36b6ff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 5rem;
+}
+
+.content {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    color: #ffffff;
+}
+
+.text {
+    width: 100%;
+}
+
+.intro {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    border: #fafafa groove;
+    width: 50%;
+}
+
+.btn {
+    display: block;
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.heading {
+    padding: 1rem;
+}
+
+.list {
+    padding: 1rem;
+}
+
+#language-list {
+    list-style-type: circle;
+}
+
+@media only screen and (max-width: 600px) {
+    .heading {
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .form-input, .btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
