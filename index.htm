@@ -93,6 +93,7 @@ def add_list_item(param):
     new_item = create("li", programming_language['id'], 'new_item');
     new_item.element.innerText = programming_language['value']
     Element('language-list').element.appendChild( new_item.element )
+    Element("form-input").element.value = ''
 
     </py-script>
 
