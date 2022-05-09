@@ -65,6 +65,7 @@
                 <form id="form" class="form">
                     <label class="form-label form-item" for="language">Programming Language:</label>
                     <legend class="form-item">Type a programming language and our python code adds it to the list.</legend>
+                    <div class="err"><span id="err-message"></span></div>
                     <input type="text" id="form-input" name="language" class="form-input form-item" placeholder="Python, JavaScript, Java,...">
                     <button id="checker" class="btn btn-primary" pys-onClick="add_list_item">Add</button>
                 </form>
@@ -87,13 +88,34 @@ programming_language = {
     "value": ''
 }
 
+existing_languages = []
+
 def add_list_item(param):
     programming_language['id'] += 1
     programming_language['value'] = Element("form-input").element.value
+    validate_input_is_valid(programming_language['value'])
+    validate_unique_entry(existing_languages, programming_language['value'])
+    err = document.getElementById('err-message')
+    err.innerHTML = ''
     new_item = create("li", programming_language['id'], 'new_item');
     new_item.element.innerText = programming_language['value']
     Element('language-list').element.appendChild( new_item.element )
     Element("form-input").element.value = ''
+    existing_languages.append(programming_language['value'])
+
+def validate_unique_entry(existing_languages, input):
+    if input in existing_languages:
+        err = document.getElementById('err-message')
+        err.innerHTML = 'That language is already in the list.'
+        raise Exception
+    return True
+
+def validate_input_is_valid(input):
+    if not input or input == '':
+        err = document.getElementById('err-message')
+        err.innerHTML = 'Please enter a programming language.'
+        raise Exception
+    return True
 
     </py-script>
 
